@@ -2,7 +2,10 @@
 
 _ Welcome to Amazon-like store!  _
 
-This interactive app store has three different interfaces (customers, manager, supervisor)
+This interactive app store has three different interfaces (customers, manager, supervisor) built by these npm components 
+    * inquirer
+    * mysql
+    * console.table
 
 * **Customers Interface:**
     Application will first started by showing user the item-id, item name, and the price.
