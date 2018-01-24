@@ -1,0 +1,30 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "This interactive app store has three different interfaces (customers, manager, supervisor)",
+  "main": "bamazonCustomer.js",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^5.0.0",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShiKwan/LAmazon.git"
+  },
+  "keywords": [
+    "node.js",
+    "mysql",
+    "javascript"
+  ],
+  "author": "Shi-Kwan tan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShiKwan/LAmazon/issues"
+  },
+  "homepage": "https://github.com/ShiKwan/LAmazon#readme"
+}
