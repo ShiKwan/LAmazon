@@ -25,9 +25,9 @@ function start () {
     type: 'rawlist',
     name: 'lsOption',
     message: 'What you want to do today?',
-    choices: ['View Product Sales By Department', 'Create New Department']
+    choices: ['View Product Sales By Department', 'Create New Department', 'I am done' ]
   }]).then(function (answer) {
-    console.log(answer)
+    //console.log(answer)
     switch (answer.lsOption) {
       case 'View Product Sales By Department':
         console.log('view product sales in department')
@@ -36,6 +36,10 @@ function start () {
       case 'Create New Department':
         console.log('create new department')
         createNewDepartment()
+        break
+      case 'I am done':
+        console.log('Good bye!')
+        connection.end();
         break
     }
   })

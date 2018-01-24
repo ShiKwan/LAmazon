@@ -40,6 +40,29 @@ connection.connect(function (err) {
 })
 
 function start () {
+  inquirer.prompt([
+    {
+      type: 'rawlist',
+      name : 'lsStart',
+      message : 'Good day! What do you want to do today?',
+      choices : ['Buy item', 'I am done']
+    }
+  ]).then(function(answer){
+    //console.log(answer);
+    switch (answer.lsStart){
+      case 'Buy item':
+        buy();
+        break;
+      case 'I am done':
+        console.log("Good bye!")
+        connection.end();
+        break;
+    }
+  })
+}
+
+
+function buy () {
   libraryArray = []
   toDisplayArray = []
   connection.query('SELECT * FROM products', function (err, results) {
@@ -127,7 +150,7 @@ function updateBamazonStore (itemQty, itemID, productSales) {
     function (err) {
       if (err) throw err
       console.log('\nItem bought successfully!\n')
-      console.log(query.sql)
+      //console.log(query.sql)
       start()
     })
 }

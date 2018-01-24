@@ -36,7 +36,7 @@ function start () {
       type: 'list',
       name: 'managerMenu',
       message: 'Hi, what do you plan to do today?',
-      choices: ['View Products for Sale', 'View Low Inventory', 'Add to Inventory', 'Add New Product']
+      choices: ['View Products for Sale', 'View Low Inventory', 'Add to Inventory', 'Add New Product', 'I am done']
     }
   ]).then(function (answer) {
     switch (answer.managerMenu) {
@@ -51,6 +51,10 @@ function start () {
         break
       case 'Add New Product':
         addNewProduct()
+        break
+      case 'I am done':
+        console.log("Good bye!")
+        connection.end()
         break
       default:
         break
