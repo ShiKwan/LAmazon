@@ -15,6 +15,7 @@ This interactive app store has three different interfaces (customers, manager, s
         * Otherwise, application will prompt user about insufficient quantity. 
         
         ![Bamazon Customer](https://media.giphy.com/media/l3diGb7PbFsvZCbaE/giphy.gif)
+        
 
 * **Manager Interface:**
     Application has 4 features. 
