@@ -14,7 +14,8 @@ This interactive app store has three different interfaces (customers, manager, s
         * If the store has the amount of quantity, it will prompt user to prepare the total amount in order to buy the specific item. 
         * Otherwise, application will prompt user about insufficient quantity. 
         
-        ![Bamazon Customer](https://media.giphy.com/media/l3diGb7PbFsvZCbaE/giphy.gif)
+![Bamazon Customer](https://media.giphy.com/media/l3diGb7PbFsvZCbaE/giphy.gif)
+
         
 
 * **Manager Interface:**
