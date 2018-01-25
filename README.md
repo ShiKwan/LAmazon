@@ -14,7 +14,7 @@ This interactive app store has three different interfaces (customers, manager, s
         * If the store has the amount of quantity, it will prompt user to prepare the total amount in order to buy the specific item. 
         * Otherwise, application will prompt user about insufficient quantity. 
         
-        ![Bamazon Customer](http://gph.is/2ncRzTt)
+        ![Bamazon Customer](https://media.giphy.com/media/l3diGb7PbFsvZCbaE/giphy.gif)
 
 * **Manager Interface:**
     Application has 4 features. 
@@ -27,8 +27,8 @@ This interactive app store has three different interfaces (customers, manager, s
     * Add New Product
         * Application will guide user step-by-step by asking user to enter the product name, department name, price, and stock quantity, once completed, it will add the items to the rack. 
       
-      ![Bamazon Manager - View Product, View Low Inventory, and Re-stock inventory](http://gph.is/2GhHqh2)
-      ![Bamazon Manager - Add New Product and View Product](http://gph.is/2naksjg)
+      ![Bamazon Manager - View Product, View Low Inventory, and Re-stock inventory](https://media.giphy.com/media/xUNd9DCFRzWfdPXWQ8/giphy.gif)
+      ![Bamazon Manager - Add New Product and View Product](https://media.giphy.com/media/3ohjVaq6FJW9F0cEQ8/giphy.gif)
       
 
 * **Supervisor Interface:**
