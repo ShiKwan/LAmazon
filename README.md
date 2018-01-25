@@ -43,6 +43,6 @@ This interactive app store has three different interfaces (customers, manager, s
     * Create New Department
         * Application will guide user step-by-step by asking user to enter the department name and over_head_costs, once completed, it will add the new departments in the database. 
         
-        ![Bamazon Manager - Add New Product and View Product](http://gph.is/2navqVT)
+        ![Bamazon Manager - Add New Product and View Product](https://media.giphy.com/media/xT1R9XxXj5xiFYFzcQ/giphy.gif)
         
 
