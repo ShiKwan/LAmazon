@@ -1,6 +1,11 @@
 var inquirer = require('inquirer')
 var mysql = require('mysql')
 var cTable = require('console.table')
+var dotEnv = require('dotenv')
+
+// create the connection information for the sql database
+dotEnv.config()
+var sqlPassword = process.env.sqlPassword
 
 // create the connection information for the sql database
 var connection = mysql.createConnection({
@@ -11,7 +16,7 @@ var connection = mysql.createConnection({
   user: 'root',
 
   // Your password
-  password: 'Gobigblue97',
+  password: sqlPassword,
   database: 'bamazon'
 })
 
@@ -27,7 +32,7 @@ function start () {
     message: 'What you want to do today?',
     choices: ['View Product Sales By Department', 'Create New Department', 'I am done' ]
   }]).then(function (answer) {
-    //console.log(answer)
+    // console.log(answer)
     switch (answer.lsOption) {
       case 'View Product Sales By Department':
         console.log('view product sales in department')
@@ -39,7 +44,9 @@ function start () {
         break
       case 'I am done':
         console.log('Good bye!')
-        connection.end();
+        connection.end()
+        break
+      default:
         break
     }
   })
@@ -51,8 +58,8 @@ function viewProdSales () {
     ' on products.department_name = departments.department_name ' +
     ' group by departments.department_id, departments.department_name, departments.over_head_costs, departments.over_head_costs ', function (err, result) {
       if (err) return err
-      //console.log(result)
-      console.table(result);
+      // console.log(result)
+      console.table(result)
       start()
       // console.log(result)
 
@@ -72,7 +79,7 @@ function createNewDepartment () {
       message: 'enter the over head costs of that department'
     }
   ]).then(function (answer) {
-    connection.query('insert into departments (department_name, over_head_costs) values ? ', [
+    connection.query('INSERT INTO departments SET ? ', [
       {
         department_name: answer.txtDepartment,
         over_head_costs: answer.txtOverHeadCosts

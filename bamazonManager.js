@@ -1,6 +1,11 @@
 var inquirer = require('inquirer')
 var mysql = require('mysql')
 var cTable = require('console.table')
+var dotEnv = require('dotenv')
+
+// create the connection information for the sql database
+dotEnv.config()
+var sqlPassword = process.env.sqlPassword
 
 // create the connection information for the sql database
 var connection = mysql.createConnection({
@@ -11,7 +16,7 @@ var connection = mysql.createConnection({
   user: 'root',
 
   // Your password
-  password: 'Gobigblue97',
+  password: sqlPassword,
   database: 'bamazon'
 })
 
@@ -53,7 +58,7 @@ function start () {
         addNewProduct()
         break
       case 'I am done':
-        console.log("Good bye!")
+        console.log('Good bye!')
         connection.end()
         break
       default:
@@ -170,7 +175,7 @@ function addToInv () {
       ], function (err) {
         if (err) return err
         console.log('\nItem added to stock successfully!\n')
-        //console.log(query.sql)
+        // console.log(query.sql)
         start()
       })
     })
